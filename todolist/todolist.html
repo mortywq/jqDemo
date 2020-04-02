@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title></title>
+		<link href="css/todolist.css"  rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="header">
+			<div class="top-content">ToDoList<input type="text" placeholder="请输入你要记录的事情"></div>
+		</div>
+		<div class="content">
+			<div class="no-finish">正在进行 <span>0</span></div>
+			<ol class="no-finish-info"><li><input type="checkbox"> <span >{{value}}</span> <a href="javascript:;">-</a></li>
+			</ol>
+			<div class="yes-finish">已经完成 <span>0</span></div>
+			<ul class="yes-finish-info"><li><input type="checkbox"> <span >sadhiasodhoi1</span> <a href="javascript:;">-</a></li></ul>
+		</div>
+	</body>
+</html>
+<script src="./js/jquery.min.js"></script>
+<script>
+	var local = getData();
+	 nubSum();
+	eachData();
+		 $('input[type=text]').on('keypress',function(e){
+			  if($(this).val() == ''){
+				  return;
+			  }
+			var mythis=$(this);
+			if(e.keyCode == 13){
+			
+			local.push({
+				val: mythis.val(),
+				done:false
+			});
+			setData(local);
+		eachData();
+		nubSum();
+			$(this).val('');
+		};
+	
+	})
+	$('ol,ul').on('click','a',function(){
+		local = getData();
+		 var i = $(this).attr('ui');
+		 console.log(i);
+		 local.splice(i,1);
+		 setData(local);
+		 eachData();
+		  nubSum();
+	
+	})
+	$('ol,ul').on('click','input',function(){
+		
+			local = getData();
+			var index = $(this).siblings('a').attr('ui');
+			local[index].done = $(this).prop('checked');
+			setData(local);
+			eachData();
+			 nubSum();
+	})
+ function getData(){
+		 var result =  localStorage.getItem('name');
+		 if(result != null){
+		  result = JSON.parse(result);
+		  return result;
+		  } else{
+			  return [];
+		  }
+	}
+	function setData(local){
+		 localStorage.setItem('name',JSON.stringify(local));
+	}
+	function eachData(){
+		$('ol').empty();
+		$('ul').empty();
+		var obj = getData();
+		for(var i = 0; i < obj.length; i++){
+			if(obj[i].done == false){
+				$('ol li').removeClass('disable');
+				 $('ol').prepend('<li><input type="checkbox"> <span >'+obj[i].val+'</span> <a href="javascript:;" ui='+i+'>-</a></li>');
+				 }
+				 else{
+						
+					 		 $('ul').prepend('<li class="disable"><input type="checkbox" checked> <span >'+obj[i].val+'</span> <a href="javascript:;" ui='+i+'>-</a></li>');
+					 		 
+				 }
+		}
+	}
+	function nubSum(){
+		 local = getData();
+		var olNum = 0;
+		var ulNum = 0;
+		$.each(local,function(index,e){
+			 if(e.done == false){
+				olNum++;
+			 }else{
+				 ulNum++;
+			 }
+		})
+		$('.no-finish span').html(olNum);
+		$('.yes-finish span').html(ulNum);
+	}
+</script>
