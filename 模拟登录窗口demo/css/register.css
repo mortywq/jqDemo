@@ -1,0 +1,111 @@
+
+			*{
+					margin: 0;
+					padding: 0;
+			}
+			body{
+				background: rgba(52, 54, 66, 0.5);
+			}
+			.title img{
+				margin-top: 5px;
+				margin-right: -6px;
+				float: right;
+			}
+			.text-login{
+				width: 300px;
+				margin: 250px auto;
+				font-size: 30px;
+				color: #3B7AE3;
+				display: none;
+				
+			}
+			.window{
+				border: 1px #ccc solid;
+				width: 400px;
+				margin: 100px auto;
+			}
+				.title{
+							height: 48px;
+					    line-height: 48px;
+					    padding: 0px 20px;
+					    color: #535353;
+					    font-size: 16px;
+					    border-bottom: 1px solid #efefef;
+					    background: #f5f5f5;
+					    cursor: move;
+					    user-select: none;
+				}
+				form{
+					padding: 25px;
+					background: #fff;
+				}
+				.user,.user-pas,.affirm,.mailbox,.phone,.sex{
+					width: 340px;
+					height: 42px;
+					margin-bottom: 15px;
+					position: relative;
+					line-height: 40px;
+				}
+				.sex{
+					border: #A9A9A9 1px solid;
+				}
+				.woman{
+					margin-left: 70px!important;
+				}
+				.user img,.user-pas img,.affirm img,.mailbox img,.phone img,.sex img{
+						position: absolute;
+						left: 3px;
+						bottom: 0;
+				}
+				.sex input{
+					 width: 10px;
+					 margin-left: 80px;
+					 height: 10px;
+				}
+				a{
+					text-decoration: none;
+				}
+				.regi a{
+					float: right;
+				  
+				}
+				.submit{
+					margin-top: 30px;
+				}
+				
+				.submit button{
+					width: 120px;
+					height: 35px;
+					line-height: 35px;
+					background-color: #26A69A;
+					outline-width: 0;
+					outline-style: none;
+					border-radius: .5;
+					margin-left: 20px;
+				}
+				.reset{
+					margin-left: 60px !important;
+				}
+				.login a{
+					display: block;	
+					height: 50px;
+					line-height: 50px;
+					text-align: center;
+					background: #3b7ae3;
+					color: #fff;
+					margin-top: 20px;
+				}
+				#img-hide{
+					left: 315px;
+				
+				}
+				.regi{
+						overflow: hidden;
+				}
+			input{
+				 width:100%;
+				 height: 100%;
+				 text-indent: 35px;
+			}
+
+	

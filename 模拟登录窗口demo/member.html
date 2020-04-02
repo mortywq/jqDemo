@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>会员管理</title>
+		<link href="css/register.css" rel="stylesheet" />
+			<script src="js/jquery.min.js"></script>
+			<script src="js/register.js"></script>
+			<script src="js/member.js"></script>
+	<link rel="stylesheet" href="css/member.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="top">
+			
+					<img src='images/member/logo.png'/>
+					会员管理系统
+			
+		
+			</div>
+			<div class="aside-nav">
+				<div class="nav">
+					<ul>
+						<li class="current"><a href="javascript:;" data-index=1>查询会员信息</a></li>
+						<li><a href="javascript:;" data-index=2>修改会员信息</a></li>
+						<li><a href="javascript:;" data-index=3>删除会员信息</a></li>
+						<li><a href="javascript:;" data-index=4>修改个人密码</a></li>
+					</ul>
+				</div>
+				<div id="content">
+					<div class="amend-info" style="display: none;">
+						<div class="window">
+							<div class="title"> 输入要修改的会员信息<img src="images/close.svg" height="40" width="20"></div>
+								<form action="index.html" method="get" id="register">
+									<div class="user">
+										<img src="images/user.svg" alt="用户" accesskey=""height="40" width="30">
+										<input type="text" placeholder="请输入会员名称" name="user">
+									</div>
+									<div class="user-pas">
+										<img src="images/pas.svg" alt="密码" height="40" width="30">
+								
+										<input type="password" placeholder="请输入会员密码" name="password">
+									</div>
+									<div class="affirm">
+										<img src="./images/register/pasrepate.svg" height="40" width="30">
+										<input type="text" name="passwored-repate"  placeholder="再次确认密码"/>
+									</div>
+									<div class="mailbox">
+										<img src="./images/register/mailbox.svg" height="40" width="30">
+										<input type="email" name="passwored-repate"  placeholder="请输入你的邮箱地址"/>
+									</div>
+									<div class="phone">
+										<img src="./images/register/phone.svg" height="40" width="30">
+										<input type="tel" name="passwored-repate"  placeholder="请输入你的手机号码" maxlength="11"/>
+									</div>
+									<div class="sex">
+										<img src="./images/register/sex.svg" height="40" width="30">
+										<label><input type="radio" name="sex"  value="man" />男</label>
+										<label><input type="radio" name="sex"  value="woman"  class="woman"/>女</label>
+										</div>
+										<div class="submit">
+											<button type="submit">提交</button>
+											<button type="reset" class="reset">重置</button>
+										</div>
+							</div>
+							</form>
+						</div>
+
+						<div class="amend-pas" style="display: none;">
+							<div class="window vip-amend">
+								<div class="title"> 修改个人密码<img src="images/close.svg" height="40" width="20"></div>
+									<form action="index.html" method="get" id="register">
+										<div class="user-pas">
+											<img src="images/pas.svg" alt="密码" height="40" width="30">
+									
+											<input type="text" placeholder="请输入旧密码" name="last-password">
+										</div>
+										<div class="affirm">
+											<img src="./images/register/pasrepate.svg" height="40" width="30">
+											<input type="text" name="new-password"  placeholder="请输入新密码"/>
+										</div>
+										<div class="affirm">
+											<img src="./images/register/pasrepate.svg" height="40" width="30">
+											<input type="text" name="new-password"  placeholder="再次输入新密码"/>
+										</div>
+										
+									
+											<div class="submit">
+												<button type="submit">提交</button>
+												<button type="reset" class="reset">重置</button>
+											</div>
+							
+								</form>
+							</div>
+							</div>
+				
+					<div class="look-info">
+						<table border="1" cellspacing="0" cellpadding="5">
+							<tr>
+								<th colspan="5">会员信息</th>
+							</tr>
+							<tr>
+								<th>会员名称</th>
+								<th>会员性别</th>
+								<th>会员邮箱</th>
+								<th>会员电话</th>
+								<th>会员简历</th>
+							</tr>
+							<tr>
+								<td>奋斗</td>
+								<td>男</td>
+								<td>10066@qq.com</td>
+								<td>13655661020</td>
+								<td>本科学历</td>
+							</tr>
+							<tr>
+								<td>小鸟依人</td>
+								<td>女</td>
+								<td>6613@qq.com</td>
+								<td>159171717</td>
+								<td>硕士学历</td>
+							</tr>
+						
+						</table>
+					</div>
+
+						<div class="amend-vip" style="display: none;" >
+							<div class="window vip-amend">
+							<div class="title"> 会员信息删除<img src="images/close.svg" height="40" width="20"></div>
+								<form action="index.html" method="get" id="login">
+									<div class="user">
+										<img src="images/user.svg" alt="用户" accesskey=""height="40" width="30">
+										<input type="text" placeholder="请输入要删除的会员名称" name="user">
+									</div>
+									
+									<div class="submit">
+										<button type="submit">提交</button>
+										<button type="reset" class="reset">重置</button>
+									</div>
+							</div>
+							</form>
+							</div>
+						</div>
+						
+					
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+

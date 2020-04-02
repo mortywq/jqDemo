@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>会员注册</title>
+		<link href="css/register.css" rel="stylesheet" />
+			<script src="js/jquery.min.js"></script>
+			<script src="js/register.js"></script>
+	</head>
+	<body>
+		<div class="text-login"><a href="javascript:;">点击此处进行注册</a></div>
+		<div class="window">
+			<div class="title"> 会员注册界面<img src="images/close.svg" height="40" width="20"></div>
+				<form action="index.html" method="get" id="register">
+					<div class="user">
+						<img src="images/user.svg" alt="用户" accesskey=""height="40" width="30">
+						<input type="text" placeholder="请输入会员名称" name="user">
+					</div>
+					<div class="user-pas">
+						<img src="images/pas.svg" alt="密码" height="40" width="30">
+				
+						<input type="password" placeholder="请输入会员密码" name="password">
+					</div>
+					<div class="affirm">
+						<img src="./images/register/pasrepate.svg" height="40" width="30">
+						<input type="text" name="passwored-repate"  placeholder="再次确认密码"/>
+					</div>
+					<div class="mailbox">
+						<img src="./images/register/mailbox.svg" height="40" width="30">
+						<input type="email" name="passwored-repate"  placeholder="请输入你的邮箱地址"/>
+					</div>
+					<div class="phone">
+						<img src="./images/register/phone.svg" height="40" width="30">
+						<input type="tel" name="passwored-repate"  placeholder="请输入你的手机号码" maxlength="11"/>
+					</div>
+					<div class="sex">
+						<img src="./images/register/sex.svg" height="40" width="30">
+						<label><input type="radio" name="sex"  value="man" />男</label>
+						<label><input type="radio" name="sex"  value="woman"  class="woman"/>女</label>
+						</div>
+						<div class="submit">
+							<button type="submit">提交</button>
+							<button type="reset" class="reset">重置</button>
+						</div>
+			</div>
+			</form>
+		</div>
+		
+		
+	</body>
+</html>

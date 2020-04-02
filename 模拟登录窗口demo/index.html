@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>会员登录</title>
+		<link href="css/login.css" rel="stylesheet" />
+			<script src="js/jquery.min.js"></script>
+			<script src="js/login.js"></script>
+		</head>
+	<body>
+		<div class="text-login"><a href="javascript:;">点击此处进行登录</a></div>
+		<div class="window">
+			<div class="title"> 会员登陆系统<img src="images/close.svg" height="40" width="20"></div>
+				<form action="member.html" method="get" id="login">
+					<div class="user">
+						<img src="images/user.svg" alt="用户" accesskey=""height="40" width="30">
+						<input type="text" placeholder="请输入会员名称" name="user">
+					</div>
+					<div class="user-pas">
+						<img src="images/pas.svg" alt="密码" height="40" width="30">
+						<img src="images/pashide.svg" width="20" height="40" id="img-hide" />
+						<input type="password" placeholder="请输入会员密码" name="password">
+					</div>
+					<div class="regi"><a href="register.html">立即注册</a></div>
+					<div class="login">
+						<a href="#" onclick="login.submit()">登录</a>
+					</div>
+			</div>
+			</form>
+		</div>
+	
+	</body>
+</html>
+
+
